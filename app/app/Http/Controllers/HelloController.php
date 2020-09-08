@@ -29,11 +29,11 @@ class HelloController extends Controller
 //         global $body;
 //         return "<html><body>" . $body . "</body></html>";
 //     }
-    public function index($id = 'zero')
+    public function index(Request $request)
     {
         $data = [
             'msg' => 'test_message',
-            'id' => $id
+            'id' => $request->id
         ];
         return view('hello.index', $data);
     }
